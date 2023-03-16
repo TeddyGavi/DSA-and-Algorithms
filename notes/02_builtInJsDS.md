@@ -22,3 +22,24 @@
 - Object.values - **O(n)**
 - Object.entries - **O(n)**
 - hasOwnProperty - **O(1)**
+
+### Arrays
+
+- arrays are ordered!
+- can store different data types --> be careful!
+- every element has an indexed value
+- Arrays are not the only ordered DS, linked lists as an example
+- insertion and removal can be an issue
+- there is a direct shortcut to the indexed value, you can jump directly to that location
+- ie array[1000] as long as that array is that length it will return the value
+
+### Methods (some)
+
+- Insertion - **depends**
+- Removal - **depends**
+- Searching - **O(n)**
+- Access - **O(1)**
+
+- .push() is constant time O(1)
+- inserted at the beginning is a problem, indexes have to be adjusted
+- inserting at the beginning is O(n)
