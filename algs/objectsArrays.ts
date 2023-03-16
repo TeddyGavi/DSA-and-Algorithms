@@ -1,3 +1,4 @@
+import * as perf from "perf_hooks";
 type person = { firstName: string; lastName: string; occupation: string };
 
 const dude: person = {
@@ -19,8 +20,10 @@ type house = string[];
 const myHome: house = ["red front door", "white curtains", "4 bedroom"];
 /* Good stuff here, as this is O(1) */
 console.log(myHome);
+const t1 = perf.performance.now();
 myHome.push("2 bathrooms");
-console.log(myHome);
+const t2 = perf.performance.now();
+console.log(myHome, `took ${t1 - t2 / 1000} seconds`);
 myHome.pop();
 console.log(myHome);
 myHome.shift();
