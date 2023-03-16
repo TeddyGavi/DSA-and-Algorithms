@@ -13,3 +13,17 @@ const value = Object.values(dude);
 const lookUp = dude.hasOwnProperty("firstName");
 
 console.log(keyArr, value, lookUp);
+
+type house = string[];
+
+const myHome: house = ["red front door", "white curtains", "4 bedroom"];
+/* Good stuff here, as this is O(1) */
+console.log(myHome);
+myHome.push("2 bathrooms");
+console.log(myHome);
+myHome.pop();
+console.log(myHome);
+myHome.shift();
+console.log(myHome);
+myHome.unshift("red front door");
+console.log(myHome);

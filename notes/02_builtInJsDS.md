@@ -43,3 +43,5 @@
 - .push() is constant time O(1)
 - inserted at the beginning is a problem, indexes have to be adjusted
 - inserting at the beginning is O(n)
+- same problem happens when we are trying to remove from the beginning
+- push() and pop() are faster then shift() and unshift()
