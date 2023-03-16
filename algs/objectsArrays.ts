@@ -23,7 +23,7 @@ console.log(myHome);
 const t1 = perf.performance.now();
 myHome.push("2 bathrooms");
 const t2 = perf.performance.now();
-console.log(myHome, `took ${t1 - t2 / 1000} seconds`);
+console.log(myHome, `took ${Math.round(t1 - t2 / 1000)} seconds`);
 myHome.pop();
 console.log(myHome);
 myHome.shift();
