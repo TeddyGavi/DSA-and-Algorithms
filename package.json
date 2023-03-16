@@ -1,0 +1,25 @@
+{
+  "name": "dsa-algs",
+  "version": "1.0.0",
+  "description": "- [Introduction](./notes/00_intro.md) - [Big O](./notes/01_bigO.md) - [Built In DS in JS](./notes/02_builtInJsDS.md)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeddyGavi/DSA-and-Algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeddyGavi/DSA-and-Algorithms/issues"
+  },
+  "homepage": "https://github.com/TeddyGavi/DSA-and-Algorithms#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
