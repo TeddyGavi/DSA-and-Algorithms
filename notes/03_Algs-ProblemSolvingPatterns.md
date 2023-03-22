@@ -13,8 +13,8 @@
 
 ## Poblem Solving Approach
 
-- [understand the problem](./problemSolving/understand.md)
-- [explore concrete examples](./problemSolving/concrete-ex.md)
-- [break it down](./problemSolving/breakItDown.md)
-- [solve simplify](./problemSolving/solve-Simplify.md)
-- [look back and refactor](./problemSolving/lookBack-Refactor.md)
+- [understand the problem](./problemSolving/1_understand.md)
+- [explore concrete examples](./problemSolving/2_concrete-ex.md)
+- [break it down](./problemSolving/3_breakItDown.md)
+- [solve simplify](./problemSolving/4_solve-Simplify.md)
+- [look back and refactor](./problemSolving/5_lookBack-Refactor.md)

@@ -38,17 +38,3 @@
     // return object
   }
   ```
-
-#### step 4
-
-- ```js
-  function charCount(str) {
-    // make object to return at end
-    // loop over string
-    // lowercase
-    // for each char check if char is num/letter is key in object add 1 to value (count)
-    // if not, add it and set value to 1
-    // if something else, do nothing
-    // return object
-  }
-  ```
