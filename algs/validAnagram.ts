@@ -29,15 +29,49 @@ validAnagram("texttwisttime","timetwisttext") //true
  * @param {string} str2
  * @returns {boolean}
  * @summary Function which given two strings, will return true if they are valid Anagrams, ie cinema, iceman is true
+ * @example  validAnagram("anagram","nagaram") // true
  */
 const validAnagram = (str1: string, str2: string): boolean => {
-  /* first attempt */
-  str1.toLowerCase().split("").sort();
-  str2.toLowerCase().split("").sort();
+  /* first attempt 
+  let sort1 = str1.toLowerCase().split("").sort();
+  let sort2 = str2.toLowerCase().split("").sort();
 
   for (let i = 0; i < str1.length; i++) {
-    if (str1[i] !== str2[i]) return false;
+    if (sort1[i] !== sort2[i]) return false;
+  }
+*/
+
+  /* frequency map version */
+  if (str1.length !== str2.length) return false;
+  let map1 = {};
+
+  for (const char of str1) {
+    map1[char] = ++map1[char] || 1;
   }
 
+  for (const char of str2) {
+    if (!map1[char]) {
+      return false;
+    } else {
+      --map1[char];
+    }
+  }
+  /*
+
+another loop is not needed if we simply decrement the count and check for falsy condition
+
+   for (const key in map1) {
+     if (map1[key] !== 0) return false;
+   }
+  
+  */
   return true;
 };
+
+console.log(validAnagram("", ""), true);
+console.log(validAnagram("aaz", "zza"), false);
+console.log(validAnagram("anagram", "nagaram"), true);
+console.log(validAnagram("rat", "car"), false);
+console.log(validAnagram("awesome", "awesom"), false);
+console.log(validAnagram("qwerty", "qeywrt"), true);
+console.log(validAnagram("texttwisttime", "timetwisttext"), true);
