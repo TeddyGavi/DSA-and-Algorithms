@@ -13,10 +13,13 @@ countUniqueValues = [-2, -1, -1, 0, 1]; // 4
  * @returns {number} The count of unique values
  */
 const countUniqueValues = (sortedArr: number[]): number => {
+  // could do this with a Set, and check the length, i will try to do it with pointers
+  /* const set = new Set(sortedArr);
+  return set.size; */
+
+  /* if (sortedArr.length === 0) return 0;
   let result = 0;
-  let hold = sortedArr[0];
-  let compare = 0;
-  // could do this with a Set, and check the length, i will try to do it with pointers first
+  let hold: number;
   for (let i = 0; i < sortedArr.length; i++) {
     if (hold !== sortedArr[i]) {
       result++;
@@ -24,7 +27,21 @@ const countUniqueValues = (sortedArr: number[]): number => {
     }
   }
 
-  return result;
+  return result; */
+
+  // without another variable and two pointers
+  if (sortedArr.length === 0) return 0;
+
+  let j = 0;
+
+  for (let i = 1; i < sortedArr.length; i++) {
+    if (sortedArr[j] !== sortedArr[i]) {
+      j++;
+      sortedArr[j] = sortedArr[i];
+    }
+  }
+
+  return j + 1;
 };
 
 console.log(countUniqueValues([1, 1, 1, 1, 1, 1, 1, 2])); // 2
