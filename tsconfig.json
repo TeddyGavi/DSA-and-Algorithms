@@ -6,5 +6,5 @@
     "sourceMap": true,
     "outDir": "dist"
   },
-  "include": ["algs/**/*"]
+  "include": ["algs/**/**/*"]
 }
