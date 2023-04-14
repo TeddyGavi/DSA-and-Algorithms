@@ -15,11 +15,25 @@ averagePair([],4) // false
 
 */
 
-const averagePair = (sortedArr: number[], average: number): boolean => {
+const averagePair = (sortedArr: number[], target: number): boolean => {
   let low = 0;
   let high = sortedArr.length - 1;
+  const length = sortedArr.length;
 
-  return true;
+  if (!length) return false;
+
+  for (let i = 0; i < sortedArr.length; i++) {
+    let average = (sortedArr[low] + sortedArr[high]) / 2;
+    if (low === high) {
+      return false;
+    } else if (average === target) {
+      return true;
+    } else if (average > target) {
+      high -= 1;
+    } else if (average < target) {
+      low += 1;
+    }
+  }
 };
 
 console.log(averagePair([1, 2, 3], 2.5)); // true
