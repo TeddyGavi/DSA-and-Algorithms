@@ -18,6 +18,14 @@ assume this is a frequency map problem...look up of a map is O(n) so this should
 interface Map {
   [key: string]: number;
 }
+
+/**
+ * @param {string | string[] | number[]} input -input can be an array of strings or numbers
+ * @returns {Map} map which is an object with the structure of 
+ * @example interface Map {
+  [key: string]: number;
+}
+ */
 const createMap = (input: string | string[] | number[]): Map => {
   const map = {};
   for (const ele of input) {
@@ -25,6 +33,15 @@ const createMap = (input: string | string[] | number[]): Map => {
   }
   return map;
 };
+
+/**
+ * @param {number} n1
+ * @param {number} n2
+ * @returns {boolean}
+ * @description function which takes two numbers and returns true if they have the same number of individual digits
+ *
+ */
+
 const sameFrequency = (n1: number, n2: number): boolean => {
   const map1 = createMap(String(n1));
   const map2 = createMap(String(n2));
