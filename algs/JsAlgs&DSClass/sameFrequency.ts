@@ -15,7 +15,7 @@ assume this is a frequency map problem...look up of a map is O(n) so this should
 
 */
 
-interface Map {
+export interface Map {
   [key: string]: number;
 }
 
@@ -26,7 +26,7 @@ interface Map {
   [key: string]: number;
 }
  */
-const createMap = (input: string | string[] | number[]): Map => {
+export const createMap = (input: string | string[] | number[]): Map => {
   const map = {};
   for (const ele of input) {
     map[ele] = ++map[ele] || 1;
