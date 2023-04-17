@@ -44,6 +44,8 @@ const findLongestSubstring = (str: string): number => {
     // console.log(set);
   }
   return length;
+
+  // need to do brute force solution
 };
 
 console.log(findLongestSubstring("")); // 0
