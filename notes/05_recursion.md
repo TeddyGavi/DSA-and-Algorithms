@@ -30,3 +30,8 @@
 
 - base case
 - different inputs
+
+### Things to look out for!
+
+- no Base case or the base case is wrong
+-
