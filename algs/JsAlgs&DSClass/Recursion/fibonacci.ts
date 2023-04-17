@@ -8,8 +8,11 @@ Write a recursive function called fib which accepts a number and returns the nth
 
 */
 
-
 const fib = (num: number): number => {
-  if (num === )
-}
-
+  if (num <= 2) return 1;
+  return fib(num - 2) + fib(num - 1);
+};
+console.log(fib(4));
+console.log(fib(10));
+console.log(fib(28));
+console.log(fib(35));
