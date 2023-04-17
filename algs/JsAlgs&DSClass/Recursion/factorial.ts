@@ -11,8 +11,8 @@ const factorial = (num: number): number => {
 // recursive
 
 const recursiveFac = (num: number): number => {
-  if (num === 1) return num;
-  return (num *= recursiveFac(num - 1));
+  if (num === 0) return 1;
+  return num * recursiveFac(num - 1);
 };
 
 console.log(factorial(3));

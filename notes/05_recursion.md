@@ -34,4 +34,30 @@
 ### Things to look out for!
 
 - no Base case or the base case is wrong
--
+- returning the wrong thing, or forgetting to return at all
+- stack overflow!
+
+## Helper Method Recursion
+
+- two functions
+- outer function, and inner
+- inner function calls itself
+
+```js
+function outer(input) {
+  let outerVar = [];
+
+  function helper(helperInput) {
+    ...
+
+    helper(helperInptput) // modified input
+  }
+
+  helper(input)
+  return outerVar
+}
+```
+
+- one reason this is done is to avoid resetting the outer variable to collect a result
+- see [Odds for example](../algs/JsAlgs%26DSClass/Recursion/helperRecusion.ts)
+- also see [Pure Recursion](../algs/JsAlgs%26DSClass/Recursion/pureRecursion.ts)
