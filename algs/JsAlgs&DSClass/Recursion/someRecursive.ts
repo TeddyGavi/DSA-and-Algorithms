@@ -13,8 +13,8 @@ Write a recursive function called someRecursive which accepts an array and a cal
 const isOdd = (val: number): boolean => val % 2 !== 0;
 
 const someRecursive = (arr: number[], cb: Function): boolean => {
-  if (arr.length === 0) return;
-  if (cb(arr[0])) return true;
+  if (arr.length === 0) return false;
+  if (cb(arr[arr.length - 1])) return true;
   return someRecursive(arr.slice(0, arr.length - 1), cb);
 };
 
