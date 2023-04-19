@@ -19,6 +19,20 @@ const obj = {
   },
 };
 
-const collectStrings = (obj: Object): string[] => {};
+const collectStrings = (obj: Object): string[] => {
+  const result: string[] = [];
 
-collectStrings(obj); // ["foo", "bar", "baz"])
+  const helper = (obj: Object) => {
+    Object.keys(obj).forEach((key) => {
+      if (typeof obj[key] === "string") {
+        result.push(obj[key]);
+      } else if (typeof obj[key] === "object" && !Array.isArray(obj[key])) {
+        return helper(obj[key]);
+      }
+    });
+  };
+  helper(obj);
+  return result;
+};
+
+console.log(collectStrings(obj)); // ["foo", "bar", "baz"])

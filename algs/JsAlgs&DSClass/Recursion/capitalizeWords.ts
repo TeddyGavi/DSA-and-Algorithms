@@ -3,7 +3,7 @@ Write a recursive function called capitalizeWords. Given an array of words, retu
  */
 
 const capitalizeWords = (arr: string[]): string[] => {
-  const result = [];
+  /*   const result = [];
   const helper = (arr: string[]): void => {
     if (arr.length === 0) return;
     let word = arr[0];
@@ -15,6 +15,15 @@ const capitalizeWords = (arr: string[]): string[] => {
     return helper(arr.slice(1));
   };
   helper(arr);
+  return result; */
+  console.log(arr);
+  if (arr.length === 1) {
+    return [arr[0].toUpperCase()];
+  }
+
+  let result = capitalizeWords(arr.slice(0, -1));
+  console.log(result);
+  result.push(arr.slice(-1)[0].toUpperCase());
   return result;
 };
 
