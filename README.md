@@ -11,3 +11,5 @@
   - [solve simplify](./notes/problemSolving/4_solve-Simplify.md)
   - [look back and refactor](./notes/problemSolving/5_lookBack-Refactor.md)
 - [Problem Solving Patterns](./notes/04_patterns.md)
+- [Recursion](./notes/05_recursion.md)
+- [Searching](./notes/06_Searching.md)
