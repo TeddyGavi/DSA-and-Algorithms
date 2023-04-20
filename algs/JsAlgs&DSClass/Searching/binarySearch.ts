@@ -4,7 +4,7 @@ const binarySearch = (arr: number[], value: number): number => {
 
   while (min <= max) {
     let guess = Math.floor((min + max) / 2);
-    // console.log(guess);
+    // console.log(`guess ${guess} min ${min} max ${max}`);
 
     if (arr[guess] === value) {
       return guess;
