@@ -9,17 +9,32 @@ const swap = (arr: Array<any>, idx1: number, idx2: number): Array<any> => {
   return arr;
 };
 
+// const bubblin = (arr: Array<any>) => {
+
+//   for (let i = arr.length; i > 0; i--) {
+//     for (let j = 0; j < i - 1; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         swap(arr, j, j + 1);
+//       }
+//     }
+//     // console.log(arr);
+//   }
+//   return arr;
+// };
 const bubblin = (arr: Array<any>) => {
-  for (let i = arr.length - 1; i > 0; i--) {
-    for (let j = 0; j < i; j++) {
+  let noSwaps: boolean;
+  for (let i = arr.length; i > 0; i--) {
+    console.log(arr);
+    noSwaps = true;
+    for (let j = 0; j < i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         swap(arr, j, j + 1);
+        noSwaps = false;
       }
     }
-    // console.log(arr);
+    if (noSwaps) break;
   }
   return arr;
 };
-
 console.log(bubblin(arr1));
 console.log(bubblin(arr2));
