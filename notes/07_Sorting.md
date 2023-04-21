@@ -52,4 +52,13 @@
 - continue to the next element and if it is not in the incorrect order, iterate through the sorted portion to the pace the element in the correct place
 - repeat!
 - works well if the data is nearly sorted
-- or if the data is coming into a site one piece at a time
+- or if the data is coming in one piece at a time
+
+## Summary
+
+- all of these algorithms have 0(n^2) and space of O(1)
+- Selection is the worst
+- Insertion has specific use cases
+- Insertion and bubble are also great when the data is nearly sorted
+- they do have the strength of constant space complexity
+- fundamental in CS
