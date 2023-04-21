@@ -24,6 +24,8 @@
 ### Bubble Sort
 
 - [Bubble Sort](../algs/JsAlgs%26DSClass/Sorting/bubble.ts)
+- Its called bubble sort because if we are ordering from smallest to largest the largest values with bubble to the top
+-
 
 ### Selection sort
 
