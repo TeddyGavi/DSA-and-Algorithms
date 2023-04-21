@@ -30,6 +30,8 @@
 ### Selection sort
 
 - [Selection Sort](../algs/JsAlgs%26DSClass/Sorting/selection.ts)
+- similar to bubble sort, it places the small values in the array first
+- sorted data is accumulating at the end
 
 ### Insertion sort
 

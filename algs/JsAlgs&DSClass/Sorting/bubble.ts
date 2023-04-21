@@ -1,7 +1,11 @@
 const arr1 = [29, 12, 10, 14, 30, 37, 18];
 const arr2 = [5, 3, 4, 1, 2];
 
-const swap = (arr: Array<any>, idx1: number, idx2: number): Array<any> => {
+export const swap = (
+  arr: Array<any>,
+  idx1: number,
+  idx2: number
+): Array<any> => {
   const temp = arr[idx1];
   arr[idx1] = arr[idx2];
   arr[idx2] = temp;
