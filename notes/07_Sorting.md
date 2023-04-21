@@ -45,9 +45,11 @@
 
 - [Insertion Sort](../algs/JsAlgs%26DSClass/Sorting/insertion.ts)
 - Key differences
-- Insertion sort is actually good at things!
+- Insertion sort is actually good at some things!
 - builds up the sort by gradually creating a larger "section" which is always sorted
 - start by picking the second element in the array
 - now compare it to the one before, if needed swap
 - continue to the next element and if it is not in the incorrect order, iterate through the sorted portion to the pace the element in the correct place
 - repeat!
+- works well if the data is nearly sorted
+- or if the data is coming into a site one piece at a time
