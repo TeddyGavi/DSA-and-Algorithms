@@ -22,5 +22,5 @@ const selection = (arr: any[]): any[] => {
   return arr;
 };
 
-// console.log(selection(arr1));
+console.log(selection(arr1));
 console.log(selection(arr2));
