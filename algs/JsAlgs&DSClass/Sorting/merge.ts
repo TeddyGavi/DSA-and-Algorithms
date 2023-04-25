@@ -32,6 +32,21 @@ const merge = (arr1: number[], arr2: number[]): number[] => {
   return results;
 };
 
-console.log(merge(arr1, arr2));
-console.log(merge(arr3, arr4));
-console.log(merge([], arr2));
+// console.log(merge(arr1, arr2));
+// console.log(merge(arr3, arr4));
+// console.log(merge([], arr2));
+
+const mergeSort = (arr: number[]): number[] => {
+  const half = Math.floor(arr.length / 2);
+  const oneHalf = arr.slice(0, half);
+  const otherHalf = arr.slice(half);
+  if (arr.length <= 1) {
+    return arr;
+  } else {
+    return merge(mergeSort(oneHalf), mergeSort(otherHalf));
+  }
+};
+
+console.log(mergeSort([89, 8, 12, 4, 32, 9, 78, 4, 6]));
+console.log(mergeSort([79, 100, 10000, 1, 1, 1, 1, 11, 14, 157, 18, 78, 4, 6]));
+console.log(mergeSort([79, 100, 10000, 1]));
