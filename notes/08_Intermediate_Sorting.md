@@ -31,6 +31,12 @@
 - keep going recursively and send each half into merge
 - once the arr.length is 1 then we return th merged array
 
+- O(n log n)
+- the number of times we split the array is log n,
+- however, the number of times we merge is a O(n) operation
+- therefore O (n log n) is the result
+- Space complexity grows linear, so its O(n)
+
 ### Quick Sort
 
 - [Quick Sort](../algs/JsAlgs%26DSClass/Sorting/quick.ts)
