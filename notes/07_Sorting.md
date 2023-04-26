@@ -49,7 +49,7 @@
 - builds up the sort by gradually creating a larger "section" which is always sorted
 - start by picking the second element in the array
 - now compare it to the one before, if needed swap
-- continue to the next element and if it is not in the incorrect order, iterate through the sorted portion to the pace the element in the correct place
+- continue to the next element and if it is not in the incorrect order, iterate through the sorted portion and place the element in the correct place
 - repeat!
 - works well if the data is nearly sorted
 - or if the data is coming in one piece at a time
