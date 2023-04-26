@@ -46,7 +46,17 @@
 - repeat!
 - made up of a helper and the main function
 - Pivot helper, given an array, the function designates an elements as the pivot
-- it should re arrange the elements in the array so that all values less than the pivot are moved to the lft o the pivot and all values greater than the pivot are moved to the right of the pivot.
+- it should re arrange the elements in the array so that all values less than the pivot are moved to the left of the pivot and all values greater than the pivot are moved to the right of the pivot.
+- the helper should do this **in place** (mutate)
+- once done the helper should return the index of the pivot
+- the runtime of quick sort, depends on the pivot index
+- roughly the median value
+- for simplicity we will chose the first element
+  - accepts three arguments, an array, a start index, and the end,
+  - pick the pivot from the start and store that in a var
+  - loop through the array from start until the end
+    - if the pivot is greater than the current element, increment the pivot index variable and then swap the current element with the element at the pivot index
+  - swap the starting element with the pivot index
 
 ### Radix Sort
 

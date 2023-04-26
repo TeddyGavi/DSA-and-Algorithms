@@ -8,23 +8,9 @@ const swap = (arr, idx1, idx2) => {
 };
 
 const insertion = (arr: any[]): any[] => {
-  // if (arr[0] > arr[1]) swap(arr, 0, 1);
-  // for (let i = 1; i < arr.length; i++) {
-  //   // let second = i;
-  //   for (let j = i - 1; j >= 0; j--) {
-  //     if (arr[i] < arr[j]) {
-  //       // console.log(arr[i], arr[j]);
-
-  //     } else if (arr[i] > arr[j]){
-  //       console.log(arr[i], "insert here", j);
-  //     }
-
-  //     // console.log(arr);
-  //   }
-  // }
-  let current;
-  // let idx;
+  let current: number;
   for (let i = 1; i < arr.length; i++) {
+    // pick the first element
     current = arr[i];
     // must start looping on sorted portion
     let j = i - 1;
