@@ -13,3 +13,5 @@
 - [Problem Solving Patterns](./notes/04_patterns.md)
 - [Recursion](./notes/05_recursion.md)
 - [Searching](./notes/06_Searching.md)
+- [Sorting](./notes/07_Sorting.md)
+- [Intermediate Sorting](./notes/08_Intermediate_Sorting.md)

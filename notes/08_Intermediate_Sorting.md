@@ -40,6 +40,13 @@
 ### Quick Sort
 
 - [Quick Sort](../algs/JsAlgs%26DSClass/Sorting/quick.ts)
+- works on the same assumption of merge, splitting the data until we get to arrays of 0 or 1 items
+- selecting a pivot point, and finding the index where the pivot should end up in sorted array
+- we now know that one number is in the right spot
+- repeat!
+- made up of a helper and the main function
+- Pivot helper, given an array, the function designates an elements as the pivot
+- it should re arrange the elements in the array so that all values less than the pivot are moved to the lft o the pivot and all values greater than the pivot are moved to the right of the pivot.
 
 ### Radix Sort
 
