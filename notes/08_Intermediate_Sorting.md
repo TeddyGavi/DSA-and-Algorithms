@@ -57,6 +57,7 @@
   - loop through the array from start until the end
     - if the pivot is greater than the current element, increment the pivot index variable and then swap the current element with the element at the pivot index
   - swap the starting element with the pivot index
+- recursively call the picot helper on the sub array to the left of the index returned from the pivot, and to the right
 
 ### Radix Sort
 
