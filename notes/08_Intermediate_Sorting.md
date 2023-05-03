@@ -66,4 +66,8 @@
 
 ### Radix Sort
 
--
+- does not make direct comparisons!
+- only works on a list of numbers
+- usually with binary
+- exploits the fact that information about the size of a number is encoded in the number of digits
+- group numbers into buckets
