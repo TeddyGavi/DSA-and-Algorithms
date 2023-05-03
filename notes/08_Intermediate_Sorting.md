@@ -58,6 +58,11 @@
     - if the pivot is greater than the current element, increment the pivot index variable and then swap the current element with the element at the pivot index
   - swap the starting element with the pivot index
 - recursively call the picot helper on the sub array to the left of the index returned from the pivot, and to the right
+- Quick sort is 0(n log n)
+- if we had 32 elements we would recurse 5 times
+- for each split we need to make O(n) comparisons
+- as we are taking the first element the worst case means that the pivot could be the most minimal element causing a O(n ^ 2)
+- same thing with maximum, better to pick a random element
 
 ### Radix Sort
 
