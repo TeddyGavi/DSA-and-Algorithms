@@ -46,5 +46,5 @@
 - same problem happens when we are trying to remove from the beginning
 - push() and pop() are faster then shift() and unshift()
   ![Built in array methods](../assets/images/builtInMethods.png)
-- can be said that concat is O(n + m) where m is the second array, time gros in proportion to the size of arrays
--
+- can be said that concat is O(n + m) where m is the second array, time grows in proportion to the size of arrays
+
