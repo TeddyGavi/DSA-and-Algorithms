@@ -87,4 +87,9 @@
 - Radix sort
   - define a function that accepts a list of numbers
   - figure out how many digits the largest number has
-  -
+  - loop through up to the largest number of digits
+    - each loop
+    - create buckets (matrix array)
+    - replace previous array with array reformed from buckets (concat)
+- outer and inner loop
+- return list!

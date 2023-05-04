@@ -31,4 +31,19 @@ console.log(mostDigits([1234, 56, 4]), 4);
 console.log(mostDigits([12, 536, 4]), 3);
 console.log(mostDigits([1234, 562344, 4]), 6);
 
-const radixSort = () => {};
+const radixSort = (arr: number[]): number[] => {
+  const largestNum = mostDigits(arr);
+
+  for (let i = 0; i < largestNum; i++) {
+    let buckets = Array.from({ length: 10 }, () => []);
+    for (let j = 0; j < arr.length; j++) {
+      let digit = getDigit(arr[j], i);
+      buckets[digit].push(arr[j]);
+    }
+    arr = [].concat(...buckets);
+  }
+  return arr;
+};
+
+console.log(radixSort([4, 3, 5, 6, 12, 3, 789]));
+console.log(radixSort([3, 9, 4, 2, 234, 3, 34, 101, 0, 789]));
