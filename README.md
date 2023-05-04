@@ -11,7 +11,14 @@
   - [solve simplify](./notes/problemSolving/4_solve-Simplify.md)
   - [look back and refactor](./notes/problemSolving/5_lookBack-Refactor.md)
 - [Problem Solving Patterns](./notes/04_patterns.md)
+
+### Non DS
+
 - [Recursion](./notes/05_recursion.md)
 - [Searching](./notes/06_Searching.md)
 - [Sorting](./notes/07_Sorting.md)
 - [Intermediate Sorting](./notes/08_Intermediate_Sorting.md)
+
+### DS
+
+- [Intro](./notes/dataStructures/00_intro.md)

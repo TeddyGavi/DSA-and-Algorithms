@@ -93,3 +93,8 @@
     - replace previous array with array reformed from buckets (concat)
 - outer and inner loop
 - return list!
+- Big O
+  - all unique and randomly distribute data it becomes n Log n
+  - equally as good as comparison sorts
+  - O(nk) in theory!
+  - limitations due to how computers store numbers in memory
