@@ -66,8 +66,25 @@
 
 ### Radix Sort
 
+- [Radix Sort](../algs/JsAlgs%26DSClass/Sorting/radix.ts)
+
 - does not make direct comparisons!
 - only works on a list of numbers
 - usually with binary
 - exploits the fact that information about the size of a number is encoded in the number of digits
 - group numbers into buckets
+- the buckets are based on the `base` of the number
+- ie, in base 10 we have 10 buckets (0..9)
+- look at the right most number and group numbers into the buckets based on that number
+- form the numbers into a list based on this and continue
+- now we are looking at the 3rd digit from the right
+- and continue for the longest digit (if 4 digits 4 passes)
+- Need some helper methods...
+  - `getDigit` need to be able to get a digit at a given position
+  - returns the digit in num at a given place
+  - `countDigit` returns how many digits
+  - `mostDigits` returns a the number of digits in the largest numbers of the list
+- Radix sort
+  - define a function that accepts a list of numbers
+  - figure out how many digits the largest number has
+  -
