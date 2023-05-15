@@ -17,5 +17,15 @@
 
 - `push` function accepts a value, and creates a new node using the value passed into the function
 - if there is no head property on the list, set the head and the tail to the newly created node
-- otherwise set the next property n the tail to be the new node and set the tail property ont he list to be the newly created node
+- otherwise set the next property on the tail to be the new node and set the tail property on the list to be the newly created node
 - increment length by one
+
+- `pop` removing the last node
+- traverse the list
+- while there is a `.next` keep going
+- keep track of the second to last node
+- assign the tail to the second to last node, and assign the second to last `.next` to null
+- return the last node
+
+- `shift` removing the first node
+- move the head over to the next value
