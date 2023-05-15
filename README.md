@@ -22,3 +22,5 @@
 ### DS
 
 - [Intro](./notes/dataStructures/00_intro.md)
+- [Class Syntax](./notes/dataStructures/01_classSyntax.md)
+- [Singly Linked List](./notes/dataStructures/02_singlyLinkedList.md)

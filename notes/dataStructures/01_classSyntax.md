@@ -70,4 +70,27 @@ student1.isLate; // 1
 - use the `static` keyword in front of a method
 - static methods **cannot** be called through a class instance
 - often used for creating a utility function
--
+- not related to single individual instance
+
+```js
+class Student {
+  constructor(firstName, lastName) {
+    // ... this...
+  }
+  // ... previous instance methods
+
+  static EnrollStudents() {
+    return `ENROLLING STUDENTS`;
+  }
+}
+// make a new Student, must be instantiated
+
+const student1 = new Student("Matt", "Davis");
+
+student1.fullName; // "Your full name is Matt Davis"
+student1.isLate; // 0
+student1.markLate();
+student1.isLate; // 1
+
+Student.EnrollStudents(); // "ENROLLING STUDENTS"
+```
