@@ -29,3 +29,5 @@
 
 - `shift` removing the first node
 - move the head over to the next value
+
+- `unshift` adding a new node to the beginning

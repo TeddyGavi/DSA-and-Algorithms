@@ -55,12 +55,28 @@ class SingleLinkedList {
     return current;
   }
 
-  shift() {
+  shift(): Node {
     if (!this.head) return undefined;
     let current = this.head;
     this.head = current.next;
     this.length--;
+    if (this.length === 0) {
+      this.tail = null;
+      this.head = null;
+    }
     return current;
+  }
+
+  unshift(val: number) {
+    const node = new Node(val);
+    if (this.length === 0) {
+      this.head = node;
+      this.tail = node;
+    }
+    node.next = this.head;
+    this.head = node;
+    this.length++;
+    return this;
   }
 }
 
@@ -76,3 +92,5 @@ console.log(list.pop());
 list.push("END");
 console.log(list.shift());
 console.log(list);
+list.unshift(7)
+console.log(list)
