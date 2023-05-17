@@ -72,12 +72,29 @@ class SingleLinkedList {
     if (this.length === 0) {
       this.head = node;
       this.tail = node;
+    } else {
+      node.next = this.head;
+      this.head = node;
     }
-    node.next = this.head;
-    this.head = node;
     this.length++;
     return this;
   }
+
+  get(index: number) {
+    if (index < 0 || index > this.length) return undefined;
+    if (index === this.length) return this.tail.val;
+    let count = 0;
+    let current = this.head;
+    while (current.next) {
+      if (count === index) {
+        return current.val;
+      }
+      count++;
+      current = current.next;
+    }
+  }
+
+
 }
 
 const list = new SingleLinkedList();
@@ -92,5 +109,9 @@ console.log(list.pop());
 list.push("END");
 console.log(list.shift());
 console.log(list);
-list.unshift(7)
-console.log(list)
+list.unshift(7);
+console.log(list);
+console.log(list.get(0), 7);
+console.log(list.get(10), undefined);
+console.log(list.get(3), "END");
+console.log(list.get(-1), undefined);

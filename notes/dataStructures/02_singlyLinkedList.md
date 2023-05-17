@@ -31,3 +31,7 @@
 - move the head over to the next value
 
 - `unshift` adding a new node to the beginning
+
+- `get` retrieves a node by its position in the linked list, returns that value
+
+- `set` 
