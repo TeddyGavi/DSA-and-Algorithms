@@ -38,4 +38,4 @@
 
 - `insert` takes an index and a val, and inserts a node into that index
 
-
+- `remove` takes an index and removes the node from that index
