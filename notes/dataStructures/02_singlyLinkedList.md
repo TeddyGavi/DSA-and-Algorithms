@@ -34,4 +34,8 @@
 
 - `get` retrieves a node by its position in the linked list, returns that value
 
-- `set` 
+- `set` takes an index, and a val and updates the value at that node(passed in index)
+
+- `insert` takes an index and a val, and inserts a node into that index
+
+
