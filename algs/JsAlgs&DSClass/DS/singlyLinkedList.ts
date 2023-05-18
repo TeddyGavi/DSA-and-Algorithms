@@ -131,20 +131,37 @@ class SingleLinkedList {
   }
 
   remove(index: number) {
-    if (index < 0 || index >= this.length) return undefined
+    if (index < 0 || index >= this.length) return undefined;
     if (index === this.length - 1) {
-      return this.pop()
-    } 
+      return this.pop();
+    }
 
     if (index === 0) {
-      return this.shift()
+      return this.shift();
     }
-    let removed = this.get(index)
-    let prevNode = this.get(index -1)
-    prevNode.next = removed.next
+    let removed = this.get(index);
+    let prevNode = this.get(index - 1);
+    prevNode.next = removed.next;
     removed.next = null;
-    this.length--
+    this.length--;
     return removed;
+  }
+
+  reverse() {
+    if (this.head === null) return
+
+    let current = this.head;
+    let prev = null;
+    let next = null;
+    while (current) {
+      next = current.next
+      current.next = prev
+      prev = current
+      current = next
+      next = null
+    }
+    this.head = prev
+    return this;
   }
 }
 
@@ -180,6 +197,8 @@ list.push("END");
 // console.log(list);
 
 list.print();
-list.remove(0)
-list.remove(5)
-list.print()
+// list.remove(0)
+// list.remove(5)
+// list.print()
+list.reverse();
+list.print();
