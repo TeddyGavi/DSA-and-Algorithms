@@ -29,7 +29,7 @@
 - now we have the merge function
 - break the array into two halves with `array.slice(0, half!)`
 - keep going recursively and send each half into merge
-- once the arr.length is 1 then we return th merged array
+- once the arr.length is 1 then we return the merged array
 
 - O(n log n)
 - the number of times we split the array is log n,
