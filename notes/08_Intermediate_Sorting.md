@@ -23,7 +23,7 @@
   - j and i start at 0
   - while there are still values we haven't looked at
     - compare the values of the first array to the second array
-      - if the value if smaller than push the value into the first array
+      - if the value is smaller than push the value into the first array
       - otherwise, push the value of the second array into the results array
 
 - now we have the merge function
@@ -45,7 +45,7 @@
 - we now know that one number is in the right spot
 - repeat!
 - made up of a helper and the main function
-- Pivot helper, given an array, the function designates an elements as the pivot
+- Pivot helper, given an array, the function designates an element as the pivot
 - it should re arrange the elements in the array so that all values less than the pivot are moved to the left of the pivot and all values greater than the pivot are moved to the right of the pivot.
 - the helper should do this **in place** (mutate)
 - once done the helper should return the index of the pivot
