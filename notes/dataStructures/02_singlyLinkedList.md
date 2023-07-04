@@ -41,3 +41,12 @@
 - `remove` takes an index and removes the node from that index
 
 - `reverse` reverses all pointers!
+
+### Big O
+
+- Insert is O(1), not the same as Arrays! Typically is much faster
+- Removal, depends,
+  - beginning: O(1)
+  - end: O(n)
+- Searching O(n)
+- Access O(n)
