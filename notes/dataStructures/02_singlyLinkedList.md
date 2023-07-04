@@ -49,4 +49,4 @@
   - beginning: O(1)
   - end: O(n)
 - Searching O(n)
-- Access O(n)
+- Access O(n), Array's are indexed so constant time to look-up
