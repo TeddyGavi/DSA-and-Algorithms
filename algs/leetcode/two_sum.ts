@@ -47,7 +47,7 @@ var twoSum = function (nums: number[], target: number): number[] {
   // return result;
 
   // const map = new Map(nums.map((x, i )=>[x, i]))
-  const map = new Map();
+  /*   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
     if (map.get(target - nums[i]) !== undefined) {
       return [map.get(target - nums[i]), i];
@@ -55,5 +55,17 @@ var twoSum = function (nums: number[], target: number): number[] {
     // console.log(map.get(target - nums[i]), map, nums[i] - target)
     map.set(nums[i], i);
   }
-  return [];
+  return []; */
+
+  let map = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    console.log(target - nums[i]);
+    let res = target - nums[i];
+
+    if (map.has(res)) {
+      return [map.get(res), i];
+    } else {
+      map.set(nums[i], i);
+    }
+  }
 };
