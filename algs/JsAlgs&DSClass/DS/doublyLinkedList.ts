@@ -58,11 +58,50 @@ class DLL {
     return tail;
   }
 
-  shift() {}
+  //remove from beginning
+  shift() {
+    if (this.length === 0) return undefined;
 
-  unShift() {}
+    let toRemove = this.head;
+    this.head = toRemove.next;
+    this.length--;
+    if (this.length === 0) {
+      this.tail = null;
+      this.head = null;
+    }
+    return toRemove;
+  }
+  // add to beginning
+  unShift(val: number | string) {
+    const node = new NodeDLL(val);
+    if (this.length === 0) {
+      this.head = node;
+      this.tail = node;
+    } else {
+      this.head.prev = node;
+      node.next = this.head;
+      this.head = node;
+    }
+    this.length++;
+    return this;
+  }
 
-  get() {}
+  get(index: number): NodeDLL {
+    if (index < 0 || index > this.length) return undefined;
+    if (index === 0) return this.head;
+    if (index === this.length) return this.tail;
+
+    let current = this.head;
+    let count = 0;
+    while (current) {
+      if (count === index) {
+        return current;
+      } else {
+        current = current.next;
+        count++;
+      }
+    }
+  }
 
   set() {}
 
@@ -77,6 +116,13 @@ dll.push(2);
 dll.push(3);
 dll.push(4);
 dll.push(5);
+// dll.print();
+// dll.pop();
 dll.print();
-dll.pop();
+dll.shift();
 dll.print();
+dll.unShift(1);
+dll.print();
+console.log(dll.get(1));
+console.log(dll.get(3));
+console.log(dll.get(5));
