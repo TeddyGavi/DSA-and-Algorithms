@@ -61,14 +61,17 @@ class DLL {
   //remove from beginning
   shift() {
     if (this.length === 0) return undefined;
-
     let toRemove = this.head;
-    this.head = toRemove.next;
-    this.length--;
-    if (this.length === 0) {
+    if (this.length === 1) {
       this.tail = null;
       this.head = null;
+    } else {
+      this.head = toRemove.next;
+      toRemove.next = null;
+      this.head.prev = null;
+      this.length--;
     }
+
     return toRemove;
   }
   // add to beginning
