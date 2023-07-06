@@ -103,9 +103,26 @@ class DLL {
     }
   }
 
-  set() {}
+  set(val: string | number, index: number): boolean {
+    const node = this.get(index);
+    if (!node) return false;
+    node.val = val;
+    return true;
+  }
 
-  insert() {}
+  insert(val: string | number, index: number) {
+    if (index < 0 || index > this.length) return false;
+    if (index === this.length) {
+      this.push(val);
+      return true;
+    }
+    if (index === 0) {
+      this.unShift(val);
+      return true;
+    }
+
+    const insertNode = new NodeDLL(val);
+  }
 
   remove() {}
 }
