@@ -99,10 +99,9 @@ class DLL {
     while (current) {
       if (count === index) {
         return current;
-      } else {
-        current = current.next;
-        count++;
       }
+      current = current.next;
+      count++;
     }
   }
 
@@ -125,9 +124,36 @@ class DLL {
     }
 
     const insertNode = new NodeDLL(val);
+    const prevNode = this.get(index - 1);
+    const nextNode = prevNode.next;
+    prevNode.next = insertNode;
+    nextNode.prev = insertNode;
+    insertNode.next = nextNode;
+    insertNode.prev = prevNode;
+
+    this.length++;
+    return true;
   }
 
-  remove() {}
+  remove(index: number) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === this.length - 1) {
+      return this.pop();
+    }
+
+    if (index === 0) {
+      return this.shift();
+    }
+    const removed = this.get(index);
+    const prevNode = this.get(index - 1);
+    const nextNode = removed.next;
+    nextNode.prev = prevNode;
+    prevNode.next = nextNode;
+    removed.next = null;
+    removed.prev = null;
+    this.length--;
+    return this;
+  }
 }
 
 const dll = new DLL();
@@ -139,10 +165,15 @@ dll.push(5);
 // dll.print();
 // dll.pop();
 dll.print();
-dll.shift();
+// dll.shift();
+// dll.print();
+// dll.unShift(1);
 dll.print();
-dll.unShift(1);
+// console.log(dll.get(1));
+// console.log(dll.get(3));
+// console.log(dll.get(5));
+dll.insert(9, 3);
 dll.print();
-console.log(dll.get(1));
-console.log(dll.get(3));
-console.log(dll.get(5));
+dll.remove(3);
+
+dll.print();
