@@ -122,10 +122,10 @@ class DLL {
   insert(val: string | number, index: number) {
     if (index < 0 || index > this.length) return false;
     if (index === this.length) {
-      return this.push(val);
+      return !!this.push(val);
     }
     if (index === 0) {
-      return this.unShift(val);
+      return !!this.unShift(val);
     }
 
     const insertNode = new NodeDLL(val);
@@ -157,7 +157,7 @@ class DLL {
     removed.next = null;
     removed.prev = null;
     this.length--;
-    return this;
+    return removed;
   }
 }
 
@@ -183,6 +183,8 @@ dll.print();
 // console.log(dll.get(5));
 dll.insert(9, 3);
 dll.print();
-dll.remove(3);
+console.log(dll.remove(3));
+console.log(dll.remove(dll.length - 1));
 
 dll.print();
+console.log(dll);
