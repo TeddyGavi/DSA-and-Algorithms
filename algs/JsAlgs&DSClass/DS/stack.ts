@@ -42,5 +42,18 @@ class Stack {
     this.size++;
     return this.size;
   }
-  pop() {}
+  /**
+   * @method pop Takes the last value into the stack and returns it
+   */
+  pop() {
+    if (this.size === 0) return null;
+    const first = this.first;
+    if (this.first === this.last) {
+      this.last = null;
+    }
+    this.first = this.first.next;
+
+    this.size--;
+    return first.val;
+  }
 }
