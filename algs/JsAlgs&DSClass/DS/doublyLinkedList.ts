@@ -120,14 +120,12 @@ class DLL {
   }
 
   insert(val: string | number, index: number) {
-    if (index < 0 || index >= this.length) return false;
+    if (index < 0 || index > this.length) return false;
     if (index === this.length) {
-      this.push(val);
-      return true;
+      return this.push(val);
     }
     if (index === 0) {
-      this.unShift(val);
-      return true;
+      return this.unShift(val);
     }
 
     const insertNode = new NodeDLL(val);
