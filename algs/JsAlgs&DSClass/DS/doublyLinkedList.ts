@@ -90,19 +90,26 @@ class DLL {
   }
 
   get(index: number): NodeDLL {
-    if (index < 0 || index > this.length) return undefined;
+    if (index < 0 || index >= this.length) return undefined;
     if (index === 0) return this.head;
     if (index === this.length) return this.tail;
-
-    let current = this.head;
-    let count = 0;
-    while (current) {
-      if (count === index) {
-        return current;
+    let current: NodeDLL, count: number;
+    if (index >= this.length / 2) {
+      current = this.tail;
+      count = this.length - 1;
+      while (count !== index) {
+        current = current.prev;
+        count--;
       }
-      current = current.next;
-      count++;
+    } else {
+      current = this.head;
+      count = 0;
+      while (count !== index) {
+        current = current.next;
+        count++;
+      }
     }
+    return current;
   }
 
   set(val: string | number, index: number): boolean {
@@ -113,7 +120,7 @@ class DLL {
   }
 
   insert(val: string | number, index: number) {
-    if (index < 0 || index > this.length) return false;
+    if (index < 0 || index >= this.length) return false;
     if (index === this.length) {
       this.push(val);
       return true;
@@ -162,6 +169,10 @@ dll.push(2);
 dll.push(3);
 dll.push(4);
 dll.push(5);
+// console.log(dll.get(100));
+// console.log(dll.get(5));
+// console.log(dll.get(3));
+// console.log(dll.get(1));
 // dll.print();
 // dll.pop();
 dll.print();
