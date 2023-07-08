@@ -23,3 +23,10 @@ THE CALL STACK!
 
 - this is FIFO a first in first out DS
 - Like a line for a dinseyland ride! or airplane
+- Background tasks
+- uploading resources (may be happening concurrently)
+- A Print queue
+- could use an array or our own linked list version
+
+An array is interesting, as the corresponding methods are push, shift and unshift and pop
+Remember must follow the FIFO principle
