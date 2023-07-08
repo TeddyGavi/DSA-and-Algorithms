@@ -4,6 +4,7 @@
 - last in first out principle
 - think of stack of plates or pancakes, removed from the top
 - more than one way to implement a stack, possibly with a linked list
+- stack can be done with an array but do not use shift unshift, as this causes a re-indexing of all items
 
 THE CALL STACK!
 
