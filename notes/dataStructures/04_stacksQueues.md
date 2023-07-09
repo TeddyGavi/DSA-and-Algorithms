@@ -22,7 +22,7 @@ THE CALL STACK!
 # Queues
 
 - this is FIFO a first in first out DS
-- Like a line for a dinseyland ride! or airplane
+- Like a line for a Disneyland ride! or airplane
 - Background tasks
 - uploading resources (may be happening concurrently)
 - A Print queue
@@ -30,3 +30,10 @@ THE CALL STACK!
 
 An array is interesting, as the corresponding methods are push, shift and unshift and pop
 Remember must follow the FIFO principle
+
+## Big 0
+
+- insertion O(1)
+- removal O(1)
+- searching O(n)
+- Access O(n)
