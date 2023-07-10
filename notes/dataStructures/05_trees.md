@@ -37,4 +37,11 @@
 - Given any node on the tree any node that is less than is located on the **left** branch
 - any node that is greater is located on the **right** branch
 - Searching is very quick, we can use the principle of Binary Search
--
+
+### Methods
+
+- Insert
+  check the root, if the value is less go to left, if value is greater go right
+  must check if the nodes exists first
+
+- Find
