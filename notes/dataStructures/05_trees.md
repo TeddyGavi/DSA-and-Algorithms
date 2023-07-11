@@ -99,3 +99,4 @@
 - however, if we search in DFS then each branch of the tree is held in the call stack, so at most this will be the depth of the tree, Once those calls are done the memory is freed and the next branch is looked at!
 - using InOrder on a Binary search tree, you will end up with the nodes "inOrder!" this could be useful
 - using PreOrder could be useful if you are working to reconstruct the tree in the future
+  **NOTE:** Find a child based on a parent is 2n + 1 for left child, and 2n + 2 for right child
