@@ -47,10 +47,43 @@
 - Find
   Same logic really, we check if the root exists, if it does and the value is less go check the left node, repeat for each side of the tree
 
-## Big O
+## Big O (BST)
 
 - Insertion O(log n)
 - Searching O(log n)
   not guaranteed however!
   as the number of nodes doubles we only increase the number of steps by 1
   a valid tree that only contains one side (ie only values bigger than the root) this is O(n), not a good way to store this type of data!
+
+- Traversal (independent of BST)
+  How to visit every node one time!
+
+1. Breadth First Search
+
+- Working across, horizontal the tree first, each node "layer"
+
+2. Depth First Search
+   Vertical
+   1. InOrder
+   2. PreOrder
+   3. PostOrder
+
+## BFS
+
+- create a queue and a variable to hold the values of nodes
+- place the root node in the queue
+- dequeue a node from the queue and push the value of the node into the variable that stores the nodes
+- if there a left on the current node add it to the queue
+- if there if there is a right property on the node add it to the cue
+  return the var that stores all the values
+
+## DFS
+
+- visit a node, and explore one entire branch before moving into the next
+- PreOrder
+  create a var to store the values
+  store the root of the tree
+  write a helper that accepts a node
+  push the value of the node to the value array or list
+  check if it has a left, call the helper again
+  if it has a right, call the function on the right

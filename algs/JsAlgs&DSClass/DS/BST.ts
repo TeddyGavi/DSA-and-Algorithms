@@ -35,6 +35,7 @@ class BST {
       return;
     }
     const check = (current: Node) => {
+      if (current.value === val) return "Multiple detected, not allowed";
       if (current.value < val) {
         if (current.right) {
           return check(current.right);
@@ -76,16 +77,51 @@ class BST {
       }
     }
   }
+
+  BFS() {
+    const q: Node[] = [];
+    const values: (number | string)[] = [];
+    let current: Node | null;
+    q.push(this.root);
+    while (q.length !== 0) {
+      current = q.shift();
+      values.push(current.value);
+      if (current.left) {
+        q.push(current.left);
+      }
+      if (current.right) {
+        q.push(current.right);
+      }
+    }
+    return values;
+  }
+
+  preOrder() {
+    const values: (string | number)[] = [];
+    const current = this.root;
+    if (!current) return null;
+    const traverse = (currentNode: Node) => {
+      values.push(currentNode.value);
+      if (currentNode.left) traverse(currentNode.left);
+      if (currentNode.right) traverse(currentNode.right);
+    };
+
+    traverse(current);
+    return values;
+  }
 }
 
 const testBst = new BST();
 testBst.insert(10);
-testBst.insert(20);
+testBst.insert(6);
+testBst.insert(8);
+testBst.insert(3);
 testBst.insert(15);
-testBst.insert(5);
-testBst.insert(7);
+testBst.insert(20);
 console.log(testBst);
 testBst.print();
 console.log(testBst.find(100));
 console.log(testBst.find(15));
 console.log(testBst.find(1));
+console.log(testBst.BFS(), [10, 6, 15, 3, 8, 20]);
+console.log(testBst.preOrder());
