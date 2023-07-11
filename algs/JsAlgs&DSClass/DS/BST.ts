@@ -77,6 +77,9 @@ class BST {
       }
     }
   }
+  /**
+   * @abstract BFS visits each node at the same level, horizontally and then moves to the next level, utilizing a queue structure to keep track of visited nodes
+   * */
 
   BFS() {
     const q: Node[] = [];
@@ -95,7 +98,6 @@ class BST {
     }
     return values;
   }
-
   preOrder() {
     const values: (string | number)[] = [];
     const current = this.root;
@@ -122,6 +124,20 @@ class BST {
     traverse(current);
     return values;
   }
+
+  inOrder() {
+    const values: (string | number)[] = [];
+    const current = this.root;
+    if (!current) return null;
+    const traverse = (currentNode: Node) => {
+      if (currentNode.left) traverse(currentNode.left);
+      values.push(currentNode.value);
+      if (currentNode.right) traverse(currentNode.right);
+    };
+
+    traverse(current);
+    return values;
+  }
 }
 
 const testBst = new BST();
@@ -139,3 +155,4 @@ console.log(testBst.find(1));
 console.log(testBst.BFS(), [10, 6, 15, 3, 8, 20]);
 console.log(testBst.preOrder());
 console.log(testBst.postOrder());
+console.log(testBst.inOrder());

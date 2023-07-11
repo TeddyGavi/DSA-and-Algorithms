@@ -90,3 +90,12 @@
 - PostOrder
   explore the tree first, then we "visit the node"
   what this means practically is we don't add the value of the node until the recursive calls are done
+- inOrder
+  traverse the entire left, to depth and visit each left node THEN traverse the right and visit and add each value to result
+
+## Which one is better?
+
+- If we have a full Binary tree, each node has two nodes, and the exact same levels the BFS will end up holding a lot of extra data in memory
+- however, if we search in DFS then each branch of the tree is held in the call stack, so at most this will be the depth of the tree, Once those calls are done the memory is freed and the next branch is looked at!
+- using InOrder on a Binary search tree, you will end up with the nodes "inOrder!" this could be useful
+- using PreOrder could be useful if you are working to reconstruct the tree in the future
