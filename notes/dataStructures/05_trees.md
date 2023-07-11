@@ -45,3 +45,12 @@
   must check if the nodes exists first
 
 - Find
+  Same logic really, we check if the root exists, if it does and the value is less go check the left node, repeat for each side of the tree
+
+## Big O
+
+- Insertion O(log n)
+- Searching O(log n)
+  not guaranteed however!
+  as the number of nodes doubles we only increase the number of steps by 1
+  a valid tree that only contains one side (ie only values bigger than the root) this is O(n), not a good way to store this type of data!
