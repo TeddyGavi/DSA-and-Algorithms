@@ -87,3 +87,6 @@
   push the value of the node to the value array or list
   check if it has a left, call the helper again
   if it has a right, call the function on the right
+- PostOrder
+  explore the tree first, then we "visit the node"
+  what this means practically is we don't add the value of the node until the recursive calls are done

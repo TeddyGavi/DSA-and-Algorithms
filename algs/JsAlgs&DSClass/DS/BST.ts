@@ -109,6 +109,19 @@ class BST {
     traverse(current);
     return values;
   }
+  postOrder() {
+    const values: (string | number)[] = [];
+    const current = this.root;
+    if (!current) return null;
+    const traverse = (currentNode: Node) => {
+      if (currentNode.left) traverse(currentNode.left);
+      if (currentNode.right) traverse(currentNode.right);
+      values.push(currentNode.value);
+    };
+
+    traverse(current);
+    return values;
+  }
 }
 
 const testBst = new BST();
@@ -125,3 +138,4 @@ console.log(testBst.find(15));
 console.log(testBst.find(1));
 console.log(testBst.BFS(), [10, 6, 15, 3, 8, 20]);
 console.log(testBst.preOrder());
+console.log(testBst.postOrder());
