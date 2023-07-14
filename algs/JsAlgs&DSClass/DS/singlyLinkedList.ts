@@ -148,19 +148,19 @@ class SingleLinkedList {
   }
 
   reverse() {
-    if (this.head === null) return
+    if (this.head === null) return;
 
     let current = this.head;
     let prev = null;
     let next = null;
     while (current) {
-      next = current.next
-      current.next = prev
-      prev = current
-      current = next
-      next = null
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+      next = null;
     }
-    this.head = prev
+    this.head = prev;
     return this;
   }
 }

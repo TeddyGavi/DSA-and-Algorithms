@@ -37,12 +37,12 @@ else
 
 const isValidSubsequence = (arr1: number[], seq: number[]): boolean => {
   // const arrIndx = [];
-  
+
   // for (let i = 0; i < seq.length; i ++) {
   //   if (!arr1.includes(seq[i])) {
   //     return false
   //   }
-  //   arrIndx.push(arr1.indexOf(seq[i])) 
+  //   arrIndx.push(arr1.indexOf(seq[i]))
   // }
 
   // const sortedArr = [...arrIndx]
@@ -56,16 +56,18 @@ const isValidSubsequence = (arr1: number[], seq: number[]): boolean => {
 
   let count = 0;
 
-  for (let i = 0; i < arr1.length; i ++) {
-    if (arr1[i] === seq[count] ) {
-      count++
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === seq[count]) {
+      count++;
     }
   }
 
-  return count === seq.length
-}
+  return count === seq.length;
+};
 
-console.log(isValidSubsequence([1,2,3,4], [1,4,2]), false) 
-console.log(isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [1, 6, -1, 10]), true)
-console.log(isValidSubsequence([1,2,3,4], [1,2]), true)
-
+console.log(isValidSubsequence([1, 2, 3, 4], [1, 4, 2]), false);
+console.log(
+  isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [1, 6, -1, 10]),
+  true,
+);
+console.log(isValidSubsequence([1, 2, 3, 4], [1, 2]), true);

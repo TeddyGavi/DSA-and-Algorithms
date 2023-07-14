@@ -4,7 +4,7 @@ const arr2 = [5, 3, 4, 1, 2];
 export const swap = (
   arr: Array<any>,
   idx1: number,
-  idx2: number
+  idx2: number,
 ): Array<any> => {
   const temp = arr[idx1];
   arr[idx1] = arr[idx2];

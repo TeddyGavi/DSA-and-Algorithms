@@ -1,7 +1,7 @@
 {
   "name": "dsa-algs",
   "version": "1.0.0",
-  "description": "- [Introduction](./notes/00_intro.md) - [Big O](./notes/01_bigO.md) - [Built In DS in JS](./notes/02_builtInJsDS.md)",
+  "description": "Learning Data Structures and Algorithms",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/TeddyGavi/DSA-and-Algorithms.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Matt Davis",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TeddyGavi/DSA-and-Algorithms/issues"
@@ -22,6 +22,12 @@
   "homepage": "https://github.com/TeddyGavi/DSA-and-Algorithms#readme",
   "devDependencies": {
     "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "3.0.0",
     "typescript": "^4.9.5"
   }
 }
