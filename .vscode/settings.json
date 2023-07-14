@@ -1,0 +1,7 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "prettier.arrowParens": "avoid",
+  "prettier.trailingComma": "none"
+}
