@@ -74,6 +74,7 @@ class MaxBinaryHeap {
     let parentIdx = 0;
     const element = this.values[0];
     const length = this.values.length;
+    // eslint-disable-next-line no-constant-condition
     while (true) {
       const leftChild = this.leftChild(parentIdx);
       const rightChild = this.rightChild(parentIdx);
