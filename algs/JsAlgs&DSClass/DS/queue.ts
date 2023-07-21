@@ -11,6 +11,7 @@ class Node {
  * @class Queue, using a linked list to create a FIFO structure
  */
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class Queue {
   first: null | Node;
   last: null | Node;

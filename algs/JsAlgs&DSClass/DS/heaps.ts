@@ -39,7 +39,6 @@ class MaxBinaryHeap {
   }
 
   /**
-   *
    * @param {number} index Index of parent
    * @returns {number} index of right child!
    */
