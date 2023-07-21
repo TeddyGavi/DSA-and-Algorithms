@@ -72,35 +72,38 @@ class MaxBinaryHeap {
     this.swap(0, this.values.length - 1);
     const oldRoot = this.values.pop();
     let parentIdx = 0;
-    const element = this.values[0];
-    const length = this.values.length;
-    // eslint-disable-next-line no-constant-condition
-    while (true) {
-      const leftChild = this.leftChild(parentIdx);
-      const rightChild = this.rightChild(parentIdx);
-      let swap = null;
-      let left: number, right: number;
-      if (leftChild < length) {
-        left = this.values[leftChild];
-        if (left > element) {
-          swap = leftChild;
+    if (this.values.length > 0) {
+      const element = this.values[0];
+      const length = this.values.length;
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        const leftChild = this.leftChild(parentIdx);
+        const rightChild = this.rightChild(parentIdx);
+        let swap = null;
+        let left: number, right: number;
+        if (leftChild < length) {
+          left = this.values[leftChild];
+          if (left > element) {
+            swap = leftChild;
+          }
         }
-      }
 
-      if (rightChild < length) {
-        right = this.values[rightChild];
-        if (
-          (swap === null && right > element) ||
-          (swap !== null && right > left)
-        ) {
-          swap = rightChild;
+        if (rightChild < length) {
+          right = this.values[rightChild];
+          if (
+            (swap === null && right > element) ||
+            (swap !== null && right > left)
+          ) {
+            swap = rightChild;
+          }
         }
-      }
 
-      if (swap === null) break;
-      this.swap(parentIdx, swap);
-      parentIdx = swap;
+        if (swap === null) break;
+        this.swap(parentIdx, swap);
+        parentIdx = swap;
+      }
     }
+
     return oldRoot;
   }
 }

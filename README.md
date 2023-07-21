@@ -24,3 +24,7 @@
 - [Intro](./notes/dataStructures/00_intro.md)
 - [Class Syntax](./notes/dataStructures/01_classSyntax.md)
 - [Singly Linked List](./notes/dataStructures/02_singlyLinkedList.md)
+- [Doubly Linked List](./notes/dataStructures/03_doublyLinkedList.md)
+- [Stacks and Queues](./notes/dataStructures/04_stacksQueues.md)
+- [Trees](./notes/dataStructures/05_trees.md)
+- [Heaps](./notes/dataStructures/06_heaps.md)
