@@ -31,3 +31,14 @@ Class PriorityQue {
 - Each node has a val and a priority use the priority to build the heap
 - enqueue methods accepts a value and a priority makes a new node and puts it in the right spot
 - dequeue method removes root element, returns it and rearranges heap using priority
+
+## Big O
+
+- regarding insert of enqueue
+- O (log N)
+- as O approaches infinite the time grows much slower than linear
+- as we move down the tree structure we have exponentially more
+- for 16 elements we ave 4 comparisons
+- 2 to what power gives us 16!
+- every time we double the number of nodes, we only increase the time it takes by 1!
+- searching isn't great! there is no implied order between nodes so searching is O(n)

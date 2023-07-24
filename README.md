@@ -28,3 +28,4 @@
 - [Stacks and Queues](./notes/dataStructures/04_stacksQueues.md)
 - [Trees](./notes/dataStructures/05_trees.md)
 - [Heaps](./notes/dataStructures/06_heaps.md)
+- [Hash Table](./notes/dataStructures/08_hashTable.md)
