@@ -1,4 +1,3 @@
-/* 
 
 function hash(key: string, arrayLength: number) {
   let total = 0;
@@ -9,8 +8,13 @@ function hash(key: string, arrayLength: number) {
   return total;
 }
 
+console.log(hash("red", 10));
+console.log(hash("red", 10));
+console.log(hash("red", 10));
+console.log(hash("red", 10));
+console.log(hash("pink", 10));
+console.log(hash("pink", 10));
+console.log(hash("pink", 10));
 console.log(hash("pink", 10));
 
-only strings!, not constant time, could be more distributed 
-
-*/
+// only strings!, not constant time, could be more distributed 
