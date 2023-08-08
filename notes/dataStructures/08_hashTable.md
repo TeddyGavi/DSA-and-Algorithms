@@ -24,3 +24,13 @@
 - distributes things uniformly
 - deterministic, same input yields same output
 - always good to incorporate prime numbers
+
+## How to handle Collisions
+- Many strategies
+
+### Separate Chaining
+- store the values at each index in out array we store the values using a more sophisticated data structure
+- ie. Array of Arrays
+
+### Linear Probing
+- When there is a collision we search through the array to find the next empty slot
