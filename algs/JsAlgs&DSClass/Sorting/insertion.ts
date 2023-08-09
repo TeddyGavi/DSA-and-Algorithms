@@ -1,13 +1,13 @@
 const arr1 = [29, 12, 10, 14, 30, 37, 18];
 const arr2 = [5, 3, 4, 1, 2];
 
-const swap = (arr, idx1, idx2) => {
+/* const swap = (arr, idx1, idx2) => {
   const temp = arr[idx1];
   arr[idx1] = arr[idx2];
   arr[idx2] = temp;
-};
+}; */
 
-const insertion = (arr: any[]): any[] => {
+const insertion = (arr: number[]): number[] => {
   let current: number;
   for (let i = 1; i < arr.length; i++) {
     // pick the first element
@@ -25,3 +25,4 @@ const insertion = (arr: any[]): any[] => {
 };
 
 console.log(insertion(arr2));
+console.log(insertion(arr1));
