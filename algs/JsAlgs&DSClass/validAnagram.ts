@@ -43,7 +43,7 @@ const validAnagram = (str1: string, str2: string): boolean => {
 
   /* frequency map version */
   if (str1.length !== str2.length) return false;
-  let map1 = {};
+   const map1 = {};
 
   for (const char of str1) {
     map1[char] = ++map1[char] || 1;

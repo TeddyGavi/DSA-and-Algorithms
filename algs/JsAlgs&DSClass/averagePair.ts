@@ -23,7 +23,7 @@ const averagePair = (sortedArr: number[], target: number): boolean => {
   if (!length) return false;
 
   for (let i = 0; i < sortedArr.length; i++) {
-    let average = (sortedArr[low] + sortedArr[high]) / 2;
+    const average = (sortedArr[low] + sortedArr[high]) / 2;
     if (low === high) {
       return false;
     } else if (average === target) {
