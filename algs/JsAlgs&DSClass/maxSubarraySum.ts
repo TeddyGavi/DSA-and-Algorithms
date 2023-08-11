@@ -4,7 +4,7 @@
  * @param {number} n  the number of consecutive digits
  * @returns {number} the max sum that can be created by forming a subarray of size n
  */
-const maxSubarraySum = (arr: number[], n: number): number => {
+const maxSubarraySum = (arr: number[], n: number): number | string => {
   let maxSum = 0;
   let tempSum = 0;
 
@@ -18,10 +18,11 @@ const maxSubarraySum = (arr: number[], n: number): number => {
 
   for (let i = n; i < arr.length; i++) {
     tempSum = tempSum - arr[i - n] + arr[i];
+    console.log(tempSum, arr[i-n], arr[i]);
     maxSum = Math.max(maxSum, tempSum);
   }
 
-  return maxSum;
+  return `max: ${maxSum}`;
 };
 
 console.log(maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3));
