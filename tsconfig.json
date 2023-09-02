@@ -6,5 +6,5 @@
     "sourceMap": true,
     "outDir": "dist"
   },
-  "include": ["algs/**/**/*", "algs/JsAlgs&DSClass/Recursion/*"]
+  "include": ["algs/**/**/*", "algs/Algs&DS/Recursion/*"]
 }
