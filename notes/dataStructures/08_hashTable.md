@@ -34,3 +34,10 @@
 
 ### Linear Probing
 - When there is a collision we search through the array to find the next empty slot
+
+### Set/get
+- Hashing! using set/get in combination with the Class
+- set will take in a key and a value, hash the key and decide how to place the data in that key, with linear probing or separate chaining
+- Get takes a key and hashes the key
+- go to that location and then check for the value in the nested DS (is using separate chaining)
+
