@@ -1,5 +1,7 @@
 # Hash Tables
 
+- [Code](../../algs/Algs&DS/DS/hashMap.ts)
+
 - what is a hash table! and what a hashing algorithm is
 - understand collisions and separate chaining and linear probing
 
