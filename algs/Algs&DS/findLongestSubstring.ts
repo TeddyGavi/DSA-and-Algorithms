@@ -30,11 +30,11 @@ const findLongestSubstring = (str: string): number => {
   // return longest;
 
   let length = 0;
-  let set = new Set<string>();
+  const set = new Set<string>();
   let start = 0;
 
   for (let i = 0; i < str.length; i++) {
-    let char = str[i];
+    const char = str[i];
     while (set.has(char)) {
       set.delete(str[start]);
       start = start + 1;
