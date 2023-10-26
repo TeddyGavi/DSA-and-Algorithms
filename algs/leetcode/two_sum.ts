@@ -59,7 +59,6 @@ const twoSum = function (nums: number[], target: number): number[] {
 
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
-    console.log(target - nums[i]);
     const res = target - nums[i];
 
     if (map.has(res)) {
